@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgrihubKe - Empowering Kenyan Farmers</title>
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Slick Slider CSS (for image slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Header with Navigation -->
+    <header>
+        <div class="logo">
+            <img src="img/Agrihub.jpg" alt="AgrihubKe" logo-image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Image Slider -->
+    <section id="home">
+        <div class="slider">
+            <div><img src="img/agriculture.jpg" alt="Farm in Kenya 1"><div class="caption">Empowering Kenyan Farmers</div></div>
+            <div><img src="img/commercial-farming.jpg" alt="Farm in Kenya 2"><div class="caption">Discover the Best Time to Plant</div></div>
+            <div><img src="img/farm-input.jpg" alt="Farm in Kenya 3"><div class="caption">Grow More with AgrihubKe</div></div>
+            <div><img src="img/farmsetup.jpg" alt="Farm in Kenya 4"><div class="caption">Start Your Farm Journey with Us</div></div>
+            <div><img src="img/farmTraining.jpg" alt="Farm in Kenya 5"><div class="caption">Training for Success</div></div>
+        </div>
+        <div class="cta-banner">
+            <p>Join the AgrihubKe community today!</p>
+            <a href="#about-us">Learn More</a>
+        </div>
+        <div class="home-info">
+            <h2>Welcome to AgrihubKe</h2>
+            <p>AgrihubKe is a platform designed to empower Kenyan farmers by providing them with the tools,
+                knowledge, and community support they need to thrive. 
+                Whether you're a beginner or an experienced farmer,
+                we offer resources on farming techniques, weather forecasts, market trends,
+                 and much more to help you succeed.</p>
+            
+            <p>Our mission is to help farmers improve their productivity, 
+                increase their profits, 
+                and contribute to the sustainable growth of the agriculture sector in Kenya.</p>
+    
+            <div class="cta-banner">
+                <p>Join the AgrihubKe community today and start your journey towards a more prosperous farming future!</p>
+                <a href="#about-us">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="trends">
+        <h2>Latest Trends in Agriculture</h2>
+        <p>Stay updated on the latest developments in the agricultural sector, including new farming technologies, 
+            sustainable practices, and market trends that will benefit Kenyan farmers.</p>
+            <h2>Trends</h2>
+            <div class="trends-gallery">
+                <a href="trend-details.html" class="trend-item">
+                    <img src="img/moneyinnagriculture.png" alt="Money in Agriculture">
+                    <div class="trend-description">Maximizing profits in farming through smart investments.</div>
+                </a>
+                
+                <a href="trend-details.html" class="trend-item">
+                    <img src="img/networks_mentoring.jpg" alt=" Mentoring and Networking Farmers">
+                    <div class="trend-description">The importance of mentoring and networks for young farmers.</div>
+                </a>
+                
+                   
+                <a href="trend-details.html" class="trend-item">
+                    <img src="img/whyyoungpeople.jpg" alt="Young people in Agriculture">
+                    <div class="trend-description">Why young people should consider a future in agriculture.</div>
+                </a>
+            </div>       
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>AgrihubKe, founded in 2005, is dedicated to empowering Kenyan farmers by providing access to vital resources, expert insights, and a strong support network. Our platform equips farmers with knowledge on optimal planting times, modern farming techniques, and market opportunities.
+        </p>
+        <p>Our mission is to foster a resilient and sustainable future for smallholder farmers in rural Kenya, offering not only educational resources but also financial support. We are committed to addressing food insecurity, which is exacerbated by climate change, unpredictable rainfall, and soil degradation. Our goal is to uplift 1 million smallholder farmers from vulnerability by 2030.</p>
+<p></p>
+    </section>
+
+    <!-- Trends Section -->
+   
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-gallery">
+            <img src="img/moneyinnagriculture.png" alt="Farm 1">
+            <img src="img/networks_mentoring.jpg" alt="Farm 2">
+            <img src="img/whyyoungpeople.jpg" alt="Farm 3">
+            <!-- More images can be added here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+ 
+           
+
+        </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AgrihubKe. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                fade: true,
+                speed: 1000
+            });
+        });
+    </script>
+
+</body>
+</html>
