@@ -1,4 +1,4 @@
-/* General styles for the website */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,41 +8,32 @@ body {
 
 /* Header */
 header {
-  background-color: #006400; /* Dark green */
+  background-color: #006400;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-}
-/* Header Logo */
-header .logo {
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
+/* Logo */
 header .logo img {
-  width: 100px; /* Adjust the size of the logo */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Space between logo and the navigation links */
+  width: 50px;
+  height: 50px;
 }
 
-/* Optional: You can also make the logo responsive */
-@media (max-width: 768px) {
-  header .logo img {
-    width: 120px; /* Smaller logo on smaller screens */
-  }
-}
-
+/* Navigation menu - always horizontal on large screens */
 header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 20px;
 }
 
 header nav ul li {
-  margin: 0 10px;
+  display: inline;
 }
 
 header nav ul li a {
@@ -51,10 +42,92 @@ header nav ul li a {
   font-size: 16px;
 }
 
-header nav ul li a:hover {
+header nav ul li a :hover {
   text-decoration: underline;
-  color: #1d5e1d;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: #d3d8d3;
+}
+
+/* Hamburger menu - visible only on small screens */
+.menu-toggle {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Close icon (SVG) */
+.close-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+.close-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+/* Mobile styles: Show hamburger menu and hide nav links */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show hamburger icon */
+  }
+  
+  header nav ul .show {
+    display: flex; /* Show the navigation links when 'show' class is added */
+  }
+
+  header nav ul {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ac7575; /* Background when menu is open */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+  }
+
+  header nav ul li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  header nav ul li a {
+    font-size: 18px;
+  }
+
+  /* Display the close icon when the menu is open */
+  .close-icon .show {
+    display: block;
+  }
+}
+
+/* Initially hide the close icon */
+.menu-toggle .close-icon {
+  display: none;
+}
+
+.menu-toggle.active .close-icon {
+  display: block;
+}
+
+.menu-toggle .hamburger-icon {
+  display: block;
+}
+
+.menu-toggle.active .hamburger-icon {
+  display: none;
 }
 
 /* Main Slider */
@@ -65,7 +138,20 @@ header nav ul li a:hover {
 
 .slider img {
   width: 100%;
-  height: auto;
+  height: 700px; /* Default height */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .slider img {
+    height: 250px; /* Smaller height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider img {
+    height: 200px; /* Even smaller height for very small screens */
+  }
 }
 
 .caption {
@@ -120,8 +206,8 @@ header nav ul li a:hover {
 }
 
 .image-gallery img {
-  width: 300px;
-  height: auto;
+  width: 250px;
+  height: 250px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -138,9 +224,27 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-/* Trends Section */
-/* Trends Section */
-/* Trends Section */
+
+/* Home Info Section */
+.home-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.cta-banner {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
 #trends {
   padding: 40px 20px;
   background-color: #f4f4f4;
@@ -155,7 +259,7 @@ header nav ul li a:hover {
 }
 
 .trend-item {
-  width: 300px; /* Set a smaller width for trend items */
+  width: 250px; /* Set a smaller width for trend items */
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -164,9 +268,9 @@ header nav ul li a:hover {
 }
 
 .trend-item img {
-  width: 30%; /* Ensure the image fits its container */
-  height: 300px; /* Set a consistent height for all images */
-  object-fit: cover; /* Crop the image without stretching */
+  width: 30%; 
+  height: 250px; 
+  object-fit: cover; 
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -194,23 +298,44 @@ header nav ul li a:hover {
   opacity: 1;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
+  header nav ul {
+    justify-content: center; /* Align items in the center */
+    gap: 10px;
+  }
+
+  .image-gallery, .trend-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .home-info h2 {
+    font-size: 28px;
+  }
+
+  .home-info p {
+    font-size: 16px;
+    
+  }
+
+  
+
   .trend-gallery {
-    flex-direction: column; /* Stack items vertically for smaller screens */
+    flex-direction: column; 
     align-items: center;
   }
 
   .trend-item {
-    width: 80%; /* Take more width on small screens */
+    width: 80%; 
   }
 
   .trend-item img {
-    height: auto; /* Allow flexibility for smaller screens */
+    height: auto; 
   }
 }
 
-
-/* Contact Us Section */
 /* Contact Us Section */
 #contact {
   padding: 40px 20px;
@@ -269,55 +394,37 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-gallery, .trend-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-info h2 {
-    font-size: 28px;
-  }
-
-  .home-info p {
-    font-size: 16px;
-  }
-
-  .cta-banner {
-    font-size: 18px;
-  }
-}
-/* General Styles for Trend Detail Page */
 #trend-detail {
-  padding: 40px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#trend-detail h2 {
-  font-size: 36px;
-  color: #006400;
+.trend-detail-content h1 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.trend-meta {
+  font-size: 0.9rem;
+  color: #555;
   margin-bottom: 20px;
 }
 
-#trend-detail img {
+.trend-image img {
   width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 20px 0;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-#trend-detail p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+.trend-description p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  font-size: 1rem;
 }
