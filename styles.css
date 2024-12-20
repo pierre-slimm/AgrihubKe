@@ -81,15 +81,13 @@ header nav ul li a :hover {
   .menu-toggle {
     display: flex; /* Show hamburger icon */
   }
-  
-  header nav ul .show {
-    display: flex; /* Show the navigation links when 'show' class is added */
-  }
+
 
   header nav ul {
     display: none; /* Hide navigation links by default */
     flex-direction: column;
     width: 100%;
+    z-index: 9999;
     background-color: #ac7575; /* Background when menu is open */
     position: absolute;
     top: 70px;
@@ -106,6 +104,10 @@ header nav ul li a :hover {
   header nav ul li a {
     font-size: 18px;
   }
+  header nav ul.show {
+    display: flex; /* Show the navigation links when 'show' class is added */
+  }
+
 
   /* Display the close icon when the menu is open */
   .close-icon .show {
@@ -268,9 +270,9 @@ header nav ul li a :hover {
 }
 
 .trend-item img {
-  width: 30%; 
-  height: 250px; 
-  object-fit: cover; 
+  width: 30%;
+  height: 250px;
+  object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -309,7 +311,7 @@ header nav ul li a :hover {
     flex-direction: column;
     align-items: center;
   }
-  
+
 
   .home-info h2 {
     font-size: 28px;
@@ -317,22 +319,22 @@ header nav ul li a :hover {
 
   .home-info p {
     font-size: 16px;
-    
+
   }
 
-  
+
 
   .trend-gallery {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   .trend-item {
-    width: 80%; 
+    width: 80%;
   }
 
   .trend-item img {
-    height: auto; 
+    height: auto;
   }
 }
 
@@ -370,6 +372,10 @@ header nav ul li a :hover {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+}
+.container{
+    width: min(1440px,100%);
+    margin-inline: auto;
 }
 
 #contact .contact-info a:hover {
