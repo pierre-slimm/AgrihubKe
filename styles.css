@@ -6,6 +6,47 @@ body {
   box-sizing: border-box;
 }
 
+/* Smooth transitions for menu */
+header nav ul {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Smooth transitions for links */
+header nav ul li a {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active link state */
+header nav ul li a.active {
+    /* Add your active state styles here, for example: */
+    color: #788bce;
+    font-weight: bold;
+}
+
+/* Menu toggle transition */
+.menu-toggle {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle  svg{
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* For mobile menu slide animation */
+header nav ul {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul.show {
+    transform: translateX(0);
+}
+
+
+
 /* Header */
 header {
   background-color: #006400;
@@ -53,7 +94,7 @@ header nav ul li a :hover {
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 25px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -116,11 +157,11 @@ header nav ul li a :hover {
 }
 
 /* Initially hide the close icon */
-.menu-toggle .close-icon {
+.close-icon {
   display: none;
 }
 
-.menu-toggle.active .close-icon {
+.close-icon.active  {
   display: block;
 }
 
@@ -128,7 +169,7 @@ header nav ul li a :hover {
   display: block;
 }
 
-.menu-toggle.active .hamburger-icon {
+.hamburger-icon.active{
   display: none;
 }
 
