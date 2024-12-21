@@ -476,23 +476,24 @@ footer a:hover {
   font-size: 1rem;
 }
 
-ol.agri-theme { 
+ol.box-style { 
     list-style: none;
-     padding: 0; }
- ol.agri-theme li { 
-    position: relative;
-     padding: 15px 20px 15px 50px; 
+     padding: 0;
+     }
+ ol.box-style li { 
+ 
+     padding: 15px 20px; 
     margin-bottom: 15px; 
     background: #f1f8e9; 
     border-radius: 5px;
-     border: 1px solid #81c784; }
-  ol.agri-theme li::before { 
-    content: '🌱'; 
-    position: absolute; 
-    left: 15px; top: 50%;
-     transform: translateY(-50%);
-      font-size: 20px; }
-/* Gallery Container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    }
+
+  ol.box-style li:hover { 
+    transform: translateX(10px);
+    background: #e9ecef;
+  }
 .container {
     width: 100%;
     max-width: 1400px;
