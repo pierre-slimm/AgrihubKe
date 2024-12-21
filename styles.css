@@ -129,7 +129,7 @@ header nav ul li a :hover {
     flex-direction: column;
     width: 100%;
     z-index: 9999;
-    background-color: #ac7575; /* Background when menu is open */
+    background-color: #2b6e0b; /* Background when menu is open */
     position: absolute;
     top: 70px;
     left: 0;
