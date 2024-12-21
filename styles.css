@@ -476,7 +476,22 @@ footer a:hover {
   font-size: 1rem;
 }
 
-
+ol.agri-theme { 
+    list-style: none;
+     padding: 0; }
+ ol.agri-theme li { 
+    position: relative;
+     padding: 15px 20px 15px 50px; 
+    margin-bottom: 15px; 
+    background: #f1f8e9; 
+    border-radius: 5px;
+     border: 1px solid #81c784; }
+  ol.agri-theme li::before { 
+    content: '🌱'; 
+    position: absolute; 
+    left: 15px; top: 50%;
+     transform: translateY(-50%);
+      font-size: 20px; }
 /* Gallery Container */
 .container {
     width: 100%;
