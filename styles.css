@@ -22,8 +22,7 @@ header nav ul li a.active {
     color: #788bce;
     font-weight: bold;
 }
-
-/* Menu toggle transition */
+ u toggle transition */
 .menu-toggle {
     transition: all 0.3s ease-in-out;
 }
@@ -71,10 +70,13 @@ header nav ul {
   padding: 0;
   display: flex;
   gap: 30px;
+  
+
 }
 
 header nav ul li {
   display: inline;
+
 }
 
 header nav ul li a {
